@@ -1,4 +1,4 @@
-# house-price-prediction-basic-visualiztion-regression
+# house-price-prediction-visualization-basic-regression
 
 # Project: Housing Price Prediction in the Ames, Iowa, United States
 
