@@ -1,5 +1,3 @@
-#### house-price-prediction-visualization-basic-regression
-
 # Project: Housing Price Prediction in the Ames, Iowa, United States
 
 Dataset: https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data 
