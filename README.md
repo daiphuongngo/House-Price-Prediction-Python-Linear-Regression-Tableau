@@ -21,20 +21,20 @@ Homebuyers in the US should take care of the Overall Quality of their property a
 As the Crisis began in 2007, a drop in prices could be a great loss for sellers but a once-in-a-lifetime deal for buyers if they afforded to purchase as previous bank loans became tightened until further actions aiding the US economy proceeded by the US President and US Congress.
 
 
-### Table of Content
-#### I. Overview	
-#### II. Preprocessing	
-##### 1/ MsSubClass: Identifies the type of dwelling involded in the sale	
-##### 2/ MSZoning: Identifies the general zoning classification of the sale
-##### 3/ LotArea: Lot size in square feet	
-##### 4/ BldgType: Type of dwelling	
-##### 5/ HouseStyle: Style of dwelling	
-##### 6/ YearBuilt: Original construction date	
-##### 7/ Yrsold: Year Sold	
-##### 8/ Sale Type	
-##### 9/ Sale Condition	
-##### 10/ OverallQual: Rates the overall house material and completion 
-#### III. Model & Evaluation	
+## Table of Content
+### I. Overview	
+### II. Preprocessing	
+#### 1/ MsSubClass: Identifies the type of dwelling involded in the sale	
+#### 2/ MSZoning: Identifies the general zoning classification of the sale
+#### 3/ LotArea: Lot size in square feet	
+#### 4/ BldgType: Type of dwelling	
+#### 5/ HouseStyle: Style of dwelling	
+#### 6/ YearBuilt: Original construction date	
+#### 7/ Yrsold: Year Sold	
+#### 8/ Sale Type	
+### 9/ Sale Condition	
+#### 10/ OverallQual: Rates the overall house material and completion 
+### III. Model & Evaluation	
 
 
 
