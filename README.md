@@ -1,5 +1,7 @@
 # Project: Housing Price Prediction in the Ames, Iowa, United States
 
+Category: Real Estate
+
 Dataset: https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data 
 
 Programming language: Python 
