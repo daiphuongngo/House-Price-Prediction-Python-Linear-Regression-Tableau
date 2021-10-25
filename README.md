@@ -90,18 +90,12 @@ According to the boxplot chart, overall, all types of sales are over US$100,000 
 
 ![image](https://user-images.githubusercontent.com/70437668/138621741-e4a100c0-d6ef-4001-9175-fe087faaefa0.png)
 
-According to these 2 charts, housing sale cases mainly forms in groups of Normal Sale, Abnormal Sale -  trade, foreclosure, short sale and Partial	 Sale -Home was not completed when last assessed (associated with New Homes).
-
-Specifically, Normal Sales has the most cases ranging strongly from US$ 100,000 up to 300,000 while the range of the Partial Sales fluctuates shorter from US$ 150,000 to 250,000 and the one of Abnormal Sale spans the shortest from US$100,000 to 150,000.
-
-In general, these 3 conditions all started from around US$100,000 and above which illustrates house deals are completed at a high rate level.
-
-This also draws attention to an overview of different conditions for the majority of housing deals with normal and short /  processes.
+According to these 2 charts, housing sale cases mainly forms in groups of Normal Sale, Abnormal Sale -  trade, foreclosure, short sale and Partial	 Sale -Home was not completed when last assessed (associated with New Homes). Specifically, Normal Sales has the most cases ranging strongly from US$ 100,000 up to 300,000 while the range of the Partial Sales fluctuates shorter from US$ 150,000 to 250,000 and the one of Abnormal Sale spans the shortest from US$100,000 to 150,000. In general, these 3 conditions all started from around US$100,000 and above which illustrates house deals are completed at a high rate level. This also draws attention to an overview of different conditions for the majority of housing deals with normal and short processes.
 
 The precipitating factor for the Financial Crisis of 2007–2008 was a high default rate in the United States subprime home mortgage sector, i.e. the bursting of the "subprime bubble". This happened when many housing mortgage debtors failed to make their regular payments, leading to a high rate of foreclosures. While the causes of the bubble are disputed, some or all of the following factors must have contributed. Also, low interest rates encouraged mortgage lending.
 
-Securitization. Many mortgages were bundled together and formed into new financial instruments called mortgage-backed securities, in a process known as securitization. These bundles could be sold as (ostensibly) low-risk securities partly because they were often backed by credit default swaps insurance.[16] Because mortgage lenders could pass these mortgages (and the associated risks) on in this way, they could and did adopt loose underwriting criteria (due in part to outdated and lax regulation[citation needed]).
-Mortgage guarantees. Many of the subprime (high risk) loans were bundled and sold, finally accruing to the quasi-government agencies Fannie Mae and Freddie Mac.[25] The implicit guarantee by the US federal government created a moral hazard and contributed to a glut of risky lending.
+Regarding the Securitization, any mortgages were bundled together and formed into new financial instruments called mortgage-backed securities, in a process known as securitization. These bundles could be sold as (ostensibly) low-risk securities partly because they were often backed by credit default swaps insurance. Because mortgage lenders could pass these mortgages (and the associated risks) on in this way, they could and did adopt loose underwriting criteria (due in part to outdated and lax regulation).
+Mortgage guarantees. Many of the subprime (high risk) loans were bundled and sold, finally accruing to the quasi-government agencies Fannie Mae and Freddie Mac. The implicit guarantee by the US federal government created a moral hazard and contributed to a glut of risky lending.
 
 ![image](https://user-images.githubusercontent.com/70437668/138621773-f5cb47fd-71dd-49d1-a8ac-e0c426644b65.png)
 
