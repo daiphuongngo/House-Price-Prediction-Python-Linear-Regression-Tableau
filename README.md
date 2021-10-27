@@ -117,7 +117,7 @@ The Overall Quality has a very strong correlation with Sale Price as its correla
 
 The model evaluated on Root Mean Square Error (rsme) receives a result at roughly $38,700 which shows that this error in predicting house prices is satisfactory. The variable having the most impact on Sale Price is Year Sold which indicates the highest correlation index at 0.79 among all features. Home buyers in the US should take care of the Overall Quality of their property as their main feature to consider before selling and buying. What comes next is when to do it as before the Financial Crisis 2007-2008, house prices might be higher with more flexible sale types and conditions. In fact, as the Crisis began in 2007, a drop in prices could be a great loss for sellers but a once-in-a-lifetime deal for buyers if they afforded to purchase as previous bank loans became tightened until the US President Obama pushed the US Congress for further actions aiding the US economy.
 
-IV. Visualization in Tableau:
+### IV. Visualization in Tableau:
 
 Housing affordability by Building Type in the US
 
