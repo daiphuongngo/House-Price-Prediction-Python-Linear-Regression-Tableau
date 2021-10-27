@@ -6,6 +6,12 @@ Dataset: https://www.kaggle.com/c/house-prices-advanced-regression-techniques/da
 
 Programming language: Python 
 
+Visualization:
+
+- Python
+
+- Tableau
+
 Platform: Spyder (Anaconda)
 
 Statistics model: Linear Regression
@@ -111,5 +117,80 @@ The Overall Quality has a very strong correlation with Sale Price as its correla
 
 The model evaluated on Root Mean Square Error (rsme) receives a result at roughly $38,700 which shows that this error in predicting house prices is satisfactory. The variable having the most impact on Sale Price is Year Sold which indicates the highest correlation index at 0.79 among all features. Home buyers in the US should take care of the Overall Quality of their property as their main feature to consider before selling and buying. What comes next is when to do it as before the Financial Crisis 2007-2008, house prices might be higher with more flexible sale types and conditions. In fact, as the Crisis began in 2007, a drop in prices could be a great loss for sellers but a once-in-a-lifetime deal for buyers if they afforded to purchase as previous bank loans became tightened until the US President Obama pushed the US Congress for further actions aiding the US economy.
 
+IV. Visualization in Tableau:
 
+Housing affordability by Building Type in the US
 
+![Housing affordability by Building Type in the US](https://user-images.githubusercontent.com/70437668/138982197-44e4f247-fe42-49f7-8ab1-3f7edab1277b.jpg)
+
+Housing affordability by House Style in the US
+
+![Housing affordability by House Style in the US](https://user-images.githubusercontent.com/70437668/138982217-e2a0ddbc-0bfa-4f6b-9bab-31dde5022e54.jpg)
+
+Housing payment by Sale Type  in the US
+
+![Housing payment by Sale Type  in the US](https://user-images.githubusercontent.com/70437668/138982244-4db38716-61bc-46a1-a6eb-4cc9c8688bf4.jpg)
+
+Housing payment by Sale Condition in the US
+
+![Housing payment by Sale Condition in the US](https://user-images.githubusercontent.com/70437668/138982273-4c7cd4ff-ca9e-46e9-abed-a6395cc058bf.jpg)
+
+House price's movement by different remodelling years in the US
+
+![House price's movement by different remodelling years in the US](https://user-images.githubusercontent.com/70437668/138982284-428a1d10-811d-4834-8b70-375c414012e2.jpg)
+
+House price's movement by different years sold in the US
+
+![House price's movement by different years sold in the US](https://user-images.githubusercontent.com/70437668/138982304-9c843f7a-1728-4b13-99c4-94e176db7dec.jpg)
+
+House price's trends by different area types - part 1
+
+![House price's trends by different area types - part 1](https://user-images.githubusercontent.com/70437668/138982323-5b4c23b7-1a33-40f5-badb-6cde91d243f1.jpg)
+
+House price's trends by different area types - part 2
+
+![House price's trends by different area types - part 2](https://user-images.githubusercontent.com/70437668/138982332-8af4a4b1-b065-4e95-af73-f72e4e6f5aab.jpg)
+
+Type of dwelling involved in the US house sale
+
+![Type of dwelling involved in the US house sale](https://user-images.githubusercontent.com/70437668/138982345-7755ad8b-e860-4991-9062-d88c98dd2c5c.jpg)
+
+Affects on US house price sold through the Financial Crisis
+
+![Affects on US house price sold through the Financial Crisis](https://user-images.githubusercontent.com/70437668/138982358-80463128-0a33-4cdf-a7ae-b34bf761fd05.jpg)
+
+General zoning classification of the US house sale
+
+![General zoning classification of the US house sale](https://user-images.githubusercontent.com/70437668/138982369-8c3a4941-6e6f-4771-982f-5c1098636b8b.jpg)
+
+Rates the overall material and finish of the house in the US
+
+![Rates the overall material and finish of the house in the US](https://user-images.githubusercontent.com/70437668/138982382-39b6113a-440e-4fe3-ab31-475f11116063.jpg)
+
+Original construction date of US houses
+
+![Original construction date of US houses](https://user-images.githubusercontent.com/70437668/138982396-b6b37d01-56fc-4339-b3d9-8b9c3ce7be21.jpg)
+
+'SalePrice' vs correlated variables (circle map) 
+
+!['SalePrice' vs correlated variables (circle map) ](https://user-images.githubusercontent.com/70437668/138982409-8c2070a3-c832-4d5f-b359-0bc2b07073f8.jpg)
+
+Dashboard - Housing Affordability by property & sale types in the US
+
+![Dashboard - Housing Affordability by property   sale types in the US](https://user-images.githubusercontent.com/70437668/138982423-6b818f8a-8cf0-4396-a161-49d9c53fba28.jpg)
+
+Dashboard - Housing Affordability by area types in the US
+
+![Dashboard - Housing Affordability by area types in the US](https://user-images.githubusercontent.com/70437668/138982435-842fba18-1d15-4c67-b8db-31536e3c94ec.jpg)
+
+Dashboard - Insights of US housing life cycle
+
+![Dashboard - Insights of US housing life cycle](https://user-images.githubusercontent.com/70437668/138982459-cec4142c-d3e3-4c35-b0ba-bdfefd7e9503.jpg)
+
+Dashboard - US house zonings & rates
+
+![Dashboard - Insights of US housing life cycle](https://user-images.githubusercontent.com/70437668/138982474-f0a9f2ed-bbe1-4304-a703-c0b58a3d0584.jpg)
+
+Story - Conclusion of the US house pricing market through the Financial Crisis 2007-2008
+
+![Story - Conclusion of the US house pricing market through the Financial Crisis 2007-2008](https://user-images.githubusercontent.com/70437668/138982477-79fb65ab-2452-44b3-ba2a-321261b027c8.jpg)
