@@ -4,13 +4,17 @@ Category: Real Estate
 
 Dataset: https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data 
 
-Programming language: Python 
-
-Visualization:
+## Languages, Machine Learning, Deep Learning models, Tools:
 
 - Python
 
 - Tableau
+
+- Linear Regression
+
+- GridSearchCV
+
+- Deep Neural Network
 
 Platform: Spyder (Anaconda)
 
@@ -117,7 +121,160 @@ The Overall Quality has a very strong correlation with Sale Price as its correla
 
 The model evaluated on Root Mean Square Error (rsme) receives a result at roughly $38,700 which shows that this error in predicting house prices is satisfactory. The variable having the most impact on Sale Price is Year Sold which indicates the highest correlation index at 0.79 among all features. Home buyers in the US should take care of the Overall Quality of their property as their main feature to consider before selling and buying. What comes next is when to do it as before the Financial Crisis 2007-2008, house prices might be higher with more flexible sale types and conditions. In fact, as the Crisis began in 2007, a drop in prices could be a great loss for sellers but a once-in-a-lifetime deal for buyers if they afforded to purchase as previous bank loans became tightened until the US President Obama pushed the US Congress for further actions aiding the US economy.
 
-### IV. Visualization in Tableau:
+### IV. Implement Deep Neural Network
+
+### Goal
+
+* Use methods of scaling, optimizer, learning)rate, model architecture
+* **Apply GridSearchCV in Koeras to find the best optimizer, learning_rate, momentum**
+* **After training the model, I will evaluate the performance on Test set**
+
+```
+from sklearn.model_selection import GridSearchCV
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras.layers import Dense, Input, Activation, Dropout, Flatten
+# Regression: use KerasRegressor
+from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
+```
+
+```
+# ===========================================
+# Case 1: learning_rate=0.01, momentum=0.9
+from tensorflow.keras.optimizers import Adam, RMSprop, SGD
+from tensorflow.keras.metrics import RootMeanSquaredError
+import matplotlib.pyplot as plt
+
+def create_model(optimizer='sgd', learning_rate=0.01, momentum=0.9):
+  model = Sequential()
+  model.add(Dense(128, activation='relu', input_shape=X_train.shape[1:]))
+  model.add(Dense(128, activation='relu'))
+  model.add(Dense(128, activation='relu'))
+  model.add(Dense(1, activation='linear'))
+  # model.add(Dense(8, activation='relu', input_shape=X_train.shape[1:]))
+  # model.add(Dense(1, activation='linear'))
+  my_optim=None
+  if optimizer == 'adam':
+    # if using optimizer as adam, there will be no learning_rate
+    my_optim = Adam(learning_rate=learning_rate)
+  elif optimizer == 'sgd':
+    my_optim = SGD(learning_rate=learning_rate, momentum=momentum)
+  elif optimizer == 'rmsprop':
+    my_optim = RMSprop(learning_rate=learning_rate, momentum=momentum)
+  
+  model.compile(loss='mse', optimizer=my_optim, metrics=['mae',RootMeanSquaredError()])
+  return model
+```
+
+### Define the grid search parameters
+```
+optimizer_values = ['adam', 'sgd', 'rmsprop']
+lr_values = [0.01, 0.1]
+momentum_values = [0.0, 0.9]
+
+param_grid = {
+    'optimizer': optimizer_values,
+    'learning_rate': lr_values,
+    'momentum': momentum_values
+}
+```
+
+```
+model = KerasRegressor(build_fn=create_model, epochs=80, verbose=1)
+
+grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1, cv=3)
+grid_result = grid.fit(X_train_scaled, y_train_scaled)
+print("Best model using: %s" % (grid_result.best_params_))
+```
+
+```
+Epoch 80/80
+37/37 [==============================] - 0s 1ms/step - loss: 0.0816 - mae: 0.1982 - root_mean_squared_error: 0.2857
+Best model using: {'learning_rate': 0.01, 'momentum': 0.0, 'optimizer': 'sgd'}
+```
+
+```
+best_model = grid_result.best_estimator_
+best_model.model.evaluate(X_test_scaled, y_test_scaled)
+```
+
+```
+10/10 [==============================] - 0s 1ms/step - loss: 0.1051 - mae: 0.2344 - root_mean_squared_error: 0.3241
+[0.1050662025809288, 0.23435331881046295, 0.32413917779922485]
+```
+
+### Compare MAE of y_test_scaled and y_pred_inverse
+
+Metrics are to evaluate the model performance but how much metrics should be depends on which I would like to define
+
+```
+y_pred = best_model.predict(X_test_scaled)
+y_pred_inverse = y_scale.inverse_transform(y_pred) # after scaling, I have to inverse_transform to see the real house price
+
+from tensorflow.keras.metrics import MeanAbsoluteError
+mae = MeanAbsoluteError()
+print(mae(y_test_scaled, y_pred_inverse))
+```
+
+```
+10/10 [==============================] - 0s 1ms/step
+tf.Tensor(186325.62, shape=(), dtype=float32)
+```
+
+### Compare RMSE of y_test_scaled and y_pred_inverse
+```
+from tensorflow.keras.metrics import MeanSquaredError
+import math
+mse = MeanSquaredError()
+print(math.sqrt(mse(y_test_scaled, y_pred_inverse)))
+```
+
+```
+200358.04878267305
+```
+
+### Conclusion
+
+The predicted MAE on the Test set is $186,325.62.
+
+The MAE on the scaled Test set is 0.2344.
+
+The real MAE is $184,885.94.
+
+As the Test set has 292 patterns, the MAE of them is $186,325.62 * 292 = $52,406,900.
+
+The RMSE of them is $200,358.05 * 292 = $58,504,536.
+
+As I have used GridSearch to find the best model (optimizers, learning rate,...), I can not return its history plot. Only if I test the previous mode, I can plot the history then.
+
+```
+# Test the previous model
+from tensorflow.keras.optimizers import Adam, RMSprop, SGD
+from tensorflow.keras.metrics import RootMeanSquaredError
+import matplotlib.pyplot as plt
+model = Sequential()
+model.add(Dense(128, activation='relu', input_shape=X_train.shape[1:]))
+model.add(Dense(128, activation='relu'))
+model.add(Dense(128, activation='relu'))
+model.add(Dense(1, activation='linear'))
+my_optim=SGD(learning_rate = 0.01, momentum = 0.0)
+model.compile(loss='mse', optimizer=my_optim, metrics=['mae',RootMeanSquaredError()])
+history = model.fit(X_train_scaled, y_train_scaled, epochs=80)
+print(history.history.keys())
+plt.plot(history.history['loss']) 
+```
+
+```
+Epoch 80/80
+37/37 [==============================] - 0s 1ms/step - loss: 0.0801 - mae: 0.1975 - root_mean_squared_error: 0.2830
+dict_keys(['loss', 'mae', 'root_mean_squared_error'])
+```
+
+<img src="https://user-images.githubusercontent.com/70437668/141609435-2b450e04-9e85-478b-adac-9e35af51aacd.jpg" width=50% height=50%>
+
+As per the plot (x: epochs, y: loss), it has reached the max limit. Even if I keep training it, it will be quite the same for loss, mae and mse.
+
+
+### V. Visualization in Tableau:
 
 Housing affordability by Building Type in the US
 
