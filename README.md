@@ -6,6 +6,8 @@
 
 ## **Master of Liberal Arts, Data Science**
 
+## **CSCI E-83 Fundamentals of Data Science in Python**
+
 ## Professor's name: **Stephen Elston**
 
 ## Author's name: **Dai Phuong Ngo (Liam)**
