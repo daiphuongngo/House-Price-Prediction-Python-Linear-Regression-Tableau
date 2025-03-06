@@ -34,6 +34,7 @@ The data comes directly from Kaggle with two sets: training and testing. I will 
 
 https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
+(TO BE CONTINUED, please refer to this final notebook in this repository for analysis and codes: https://colab.research.google.com/drive/1gNkXxY6OfcLWn5zHZhHML8VBmNIWeiKl?usp=sharing )
 
 ## Languages, Machine Learning, Deep Learning models, Tools:
 
